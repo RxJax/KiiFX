@@ -1487,6 +1487,42 @@ canvas { display: block; }
   .savings-banner { grid-template-columns: repeat(2, 1fr); }
 }
 
+@media (max-width: 768px) {
+  .nav-badge { display: none !important; }
+  .map-stage {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .map-metrics {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 16px;
+    width: 100%;
+  }
+  .map-metric {
+    min-width: unset;
+    padding: 8px 12px;
+  }
+  .tx-feed {
+    position: static;
+    width: 100%;
+    border: none;
+    border-top: 1px solid var(--border);
+    border-radius: 0;
+    box-shadow: none;
+    background: rgba(5, 8, 16, 0.4);
+    padding: 12px;
+  }
+  .route-legend {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
 @media (max-width: 640px) {
   .nav-links { display: none; }
   .nav { padding: 0 16px; }
@@ -1502,6 +1538,19 @@ canvas { display: block; }
   .footer-links { flex-direction: column; gap: 24px; }
   .savings-banner { grid-template-columns: 1fr 1fr; }
   .hero-ctas { flex-direction: column; }
+}
+
+@media (max-width: 560px) {
+  .nav-status { display: none !important; }
+}
+
+@media (max-width: 480px) {
+  .savings-banner { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 400px) {
+  .logo-text { font-size: 15px; }
+  .btn-nav-cta { padding: 6px 12px; font-size: 12px; }
 }
 
 /* RESULTS WRAPPER AND DORMANT OVERLAY */
